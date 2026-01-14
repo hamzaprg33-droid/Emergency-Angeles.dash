@@ -2,22 +2,41 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Discord Embed Dashboard</title>
+  <title>Discord Dashboard</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Discord Embed Dashboard</h1>
+<div class="container">
+  <h1>Discord Message Dashboard</h1>
 
-<input id="channelId" placeholder="Channel ID"><br><br>
-<input id="messageId" placeholder="Message ID (leer = neue Nachricht)"><br><br>
+  <input id="channelId" placeholder="Channel ID">
+  <input id="messageId" placeholder="Message ID (leer = neu)">
 
-<input id="title" placeholder="Embed Titel"><br><br>
-<textarea id="description" placeholder="Embed Beschreibung"></textarea><br><br>
-<input id="color" placeholder="Farbe (z.B. #5865F2)"><br><br>
+  <textarea id="content" placeholder="Normale Nachricht (optional)"></textarea>
 
-<button onclick="send()">Senden / Bearbeiten</button>
+  <h2>Embed</h2>
 
-<pre id="result"></pre>
+  <input id="title" placeholder="Titel">
+  <textarea id="description" placeholder="Beschreibung"></textarea>
+  <input id="color" placeholder="Farbe (#5865F2)">
+
+  <input id="authorName" placeholder="Author Name">
+  <input id="authorIcon" placeholder="Author Icon URL">
+
+  <input id="footerText" placeholder="Footer Text">
+  <input id="footerIcon" placeholder="Footer Icon URL">
+
+  <input id="thumbnail" placeholder="Thumbnail URL">
+  <input id="image" placeholder="Image URL">
+
+  <h3>Fields</h3>
+  <textarea id="fields" placeholder='JSON z.B. [{"name":"Test","value":"Hallo","inline":true}]'></textarea>
+
+  <button onclick="send()">Senden / Bearbeiten</button>
+
+  <pre id="result"></pre>
+</div>
 
 <script src="script.js"></script>
 </body>
